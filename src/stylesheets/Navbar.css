@@ -1,0 +1,74 @@
+.navcontainer {
+  border-bottom: 0.4px solid rgb(172, 172, 172);
+  padding: 10px;
+  padding-bottom: 0px;
+  transition: all 0.5s ease;
+}
+.navbar {
+  text-align: center;
+  position: relative;
+}
+.title {
+  font-family: "Bodoni Moda", serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  word-spacing: 5px;
+  padding-bottom: 10px;
+}
+.navlist {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(131, 131, 131);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.navitem {
+  padding: 10px 10px;
+}
+.navitem:hover {
+  color: rgb(48, 48, 48);
+  background-color: rgb(241, 241, 241);
+  text-shadow: 0px 0px 1px black;
+}
+.searchpanel {
+  position: absolute;
+  right: 1vw;
+  top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: rgb(78, 78, 78);
+  font-size: 14px;
+}
+.subscribe {
+  margin-bottom: 20px;
+}
+.subscribe span {
+  padding: 5px 10px;
+}
+.subscribe span:first-child {
+  border-right: 0.5px solid rgb(161, 161, 161);
+}
+.search span {
+  vertical-align: middle;
+  font-size: 30px;
+  margin-left: 10px;
+}
+.searchicon {
+  position: absolute;
+  top: 10px;
+  right: 1vw;
+  visibility: hidden;
+}
+@media screen and (max-width: 1300px) {
+  .searchpanel {
+    display: none;
+  }
+  .searchicon {
+    visibility: visible;
+  }
+}

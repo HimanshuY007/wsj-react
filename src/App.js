@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useRef, useEffect } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Headlines from "./components/Headlines";
 function App() {
+  const upBar = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      if (window.scrollY > 90) {
+        upBar.current.style.transform = "translateY(0)";
+      } else {
+        upBar.current.style.transform = "translateY(-100%)";
+      }
+    });
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="hiddenbar" ref={upBar}>
+        <Navbar />
+      </div>
+      <Navbar />
+      <Headlines />
+    </>
   );
 }
 
